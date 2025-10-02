@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Postres - Dulce y Salado</title>
+  <meta name="description" content="Postres caseros y tradicionales en Dulce y Salado. Disfruta de arroz de leche, merengón, macarrones y más. Haz tu pedido online.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="imagenes/favicon-32x32.png" type="image/png">
+
+  <!-- Estilos y fuentes -->
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Scripts externos -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <img class="logo" src="imagenes/logo.webp" alt="Logo de Dulce y Salado">
+    <h1 class="titulo1">DULCE Y SALADO</h1>
+    <nav class="menu" aria-label="Menú principal">
+      <a href="index.html">Inicio</a>
+      <a href="tartas.html">Tartas</a>
+      <a href="postres.html">Postres</a>
+      <a href="amasijos.html">Bocaditos</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <div class="cart-icon" aria-label="Carrito de compras" role="button">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="cart-count" aria-live="polite">0</span>
+    </div>
+  </header>
+
+  <!-- CONTENEDOR DE PRODUCTOS -->
+  <main>
+    <section id="product-grid" class="product-grid" aria-label="Lista de productos"></section>
+  </main>
+
+  <!-- PANEL DEL CARRITO -->
+  <aside class="cart-panel" aria-hidden="true">
+    <div class="cart-panel-header">
+      <h3>Mi Carrito</h3>
+      <button class="close-btn" aria-label="Cerrar carrito"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cart"></div>
+    <div class="cart-total">
+      <p>Total: <span id="total-price">€0.00</span></p>
+      <button class="btn-checkout" id="btn-process-checkout">Procesar Compra</button>
+    </div>
+  </aside>
+
+  <!-- MODAL DETALLE PRODUCTO -->
+  <div id="product-detail-modal" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal-content product-detail-content">
+      <button class="close-modal-btn" aria-label="Cerrar modal">&times;</button>
+      <img src="" alt="Vista previa del producto" id="modal-product-image">
+      <h2 id="modal-product-title"></h2>
+      <p id="modal-product-description"></p>
+      <p class="precio" id="modal-product-price"></p>
+    </div>
+  </div>
+
+  <!-- MODAL PAGO -->
+  <div id="payment-modal" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <button class="close-modal-btn" aria-label="Cerrar modal">&times;</button>
+      <h2>Información de Pago</h2>
+      <form id="payment-form" class="payment-form">
+        <label for="card-name">Nombre en la tarjeta</label>
+        <input type="text" id="card-name" name="card-name" required>
+        
+        <label for="card-number">Número de la tarjeta</label>
+        <input type="text" id="card-number" name="card-number" placeholder="1111 2222 3333 4444" required pattern="\d{4} \d{4} \d{4} \d{4}">
+        
+        <div class="form-row">
+          <div>
+            <label for="expiry-date">Fecha de caducidad</label>
+            <input type="text" id="expiry-date" placeholder="MM/YY" required pattern="(0[1-9]|1[0-2])\/\d{2}">
+          </div>
+          <div>
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" maxlength="3" placeholder="123" required pattern="\d{3,4}">
+          </div>
+        </div>
+        
+        <button type="submit" class="btn-modal" id="submit-btn">Pagar Ahora</button>
+      </form>
+      <div id="success-message" class="message success">
+        ¡Pago procesado exitosamente! Se ha enviado un correo de confirmación.
+      </div>
+      <div id="error-message" class="message error">
+        Error al procesar el pago. Por favor, intente nuevamente.
+      </div>
+    </div>
+  </div>
+
+  <!-- OVERLAY -->
+  <div class="overlay"></div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <nav class="social" aria-label="Redes sociales">
+      <ul>
+        <li><a href="https://www.facebook.com/tusuariodefacebook" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="https://www.twitter.com/tusuariodetwitter" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.instagram.com/tusuariodeinstagram" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/tusuariodelinkedin" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+        <li><a href="https://www.github.com/tusuariodegithub" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2025 DULCE Y SALADO. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Scripts locales -->
+  <script src="postres.js" defer></script>
+  <script src="pago.js" defer></script>
+</body>
+</html>

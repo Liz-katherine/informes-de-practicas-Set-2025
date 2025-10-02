@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulce y Salado</title>
+    <meta name="description" content="Dulce y Salado: tienda online de postres, tartas y bocaditos artesanales. Descubre nuestros productos favoritos y realiza tu pedido fácilmente.">
+    <link rel="icon" href="imagenes/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Kings&family=Leckerli+One&family=Pacifico&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+      <img class="logo" src="imagenes/logo.webp" alt="Logo">
+      <div class="titulo1">
+          <h1>DULCE Y Salado</h1>
+          <p>Postres y bocaditos artesanales en Lasarte-Oria / Gipuzkoa</p>
+      </div>
+      <nav class="menu">
+          <a href="#index.html">Inicio</a>
+          <a href="tartas.html">Tartas</a>
+          <a href="postres.html">Postres</a>
+          <a href="amasijos.html">Bocaditos</a>
+          <a href="contacto.html">Contacto</a>
+      </nav>
+  </header>
+
+  <!-- Sección de entrega con notas -->
+  <section class="entrega">
+      <div class="nota">
+          <img src="imagenes/entrega.png" alt="Tiempo de entrega">
+          <p>Entrega en 24-48 horas</p>
+      </div>
+      <div class="nota">
+          <img src="imagenes/envio.png" alt="Envio gratis">
+          <p>Envío gratuito a partir de 45€</p>
+      </div>
+  </section>
+
+  <!-- Banner -->
+  <section class="banner">
+      <img src="imagenes/banner.png" alt="Banner Dulce y Salado">
+  </section>
+
+  <!-- Introducción -->
+  <section class="intro">
+      <div class="nota">
+          <h2>Postres artesanales y delicias saladas para todos los gustos</h2>
+          <p>En Dulce y Salado elaboramos postres y delicias saladas con pasión, sabor y un toque artesanal.</p>
+      </div>
+  </section>
+
+  <!-- Sección favoritos / carrusel -->
+  <section class="seccion1">
+      <img src="imagenes/bowl.png" alt="Bowl" class="bowl-lateral">
+      <img src="imagenes/batidora.png" alt="Batidora" class="bowl-lateral1">
+      <img src="imagenes/espatula.png" alt="Espátula" class="bowl-lateral2">
+      <img src="imagenes/galletas.png" alt="Galletas" class="bowl-lateral3">
+
+      <section class="seccion1">
+    <h2>Los favoritos de nuestros clientes</h2>
+    <div class="carrusel" id="galeria">
+        <div class="slide active" style="background: linear-gradient(135deg, #fbe4f9, #f472b6);">
+            <img src="imagenes/cakecoco2.jpg" alt="Tarta de chocolate">
+            <h3>Tarta de Chocolate</h3>
+        </div>
+        <div class="slide" style="background: linear-gradient(135deg, #ffe4b5, #ff8c42);">
+            <img src="imagenes/Rollofresaycrema2.jpg" alt="Bocaditos variados">
+            <h3>Bocaditos variados</h3>
+        </div>
+        <div class="slide" style="background: linear-gradient(135deg, #c1f0f6, #4fc3f7);">
+            <img src="imagenes/Tiramisu2.jpg" alt="Postres especiales">
+            <h3>Postres Especiales</h3>
+        </div>
+        <div class="slide" style="background: linear-gradient(135deg, #e0f7fa, #80deea);">
+            <img src="imagenes/tresleches2.jpg" alt="Torta Tres Leches">
+            <h3>Torta Tres Leches</h3>
+        </div>
+        <div class="slide" style="background: linear-gradient(135deg, #f3e5f5, #ba68c8);">
+            <img src="imagenes/cupcakes2.jpg" alt="Cupcakes variados">
+            <h3>Cupcakes variados</h3>
+        </div>
+    </div>
+    <div class="indicadores" id="indicador"></div>
+    <div class="btns">
+        <button id="prev">Anterior</button>
+        <button id="next">Siguiente</button>
+        <button id="play">▶ Reproducir</button>
+        <button id="pause">⏹ Detener</button>
+    </div>
+</section>
+
+<!--       <div class="carrusel" id="galeria">
+          <h3>Variedad de tartas y postres caseros</h3>
+          <h3>Bocaditos para eventos y celebraciones</h3>
+          <img id="foto" src="imagenes/foto1.jpg" alt="Producto destacado"/>
+          <div class="indicadores" id="indicador"></div>
+          <div class="btns">
+              <button onclick="imganterior()">Anterior</button>
+              <button onclick="imgsiguiente()">Siguiente</button>
+              <button onclick="reproducirCarrusel()">▶ Reproducir</button>
+              <button onclick="detenerCarrusel()">⏹ Detener</button>
+          </div>
+      </div>
+  </section> -->
+
+  <!-- FAQ con notas -->
+  <section class="faq">
+      <h2>Preguntas frecuentes</h2>
+      <div class="faq-item nota">
+          <h3 onclick="toggleFAQ(this)">¿Cuánto tardará mi pedido?</h3>
+          <p>Los pedidos se entregan en un plazo de 24-48 horas. Para pedidos grandes, consúltanos directamente.</p>
+      </div>
+      <div class="faq-item nota">
+          <h3 onclick="toggleFAQ(this)">¿Realizan pedidos personalizados?</h3>
+          <p>Sí, elaboramos tartas y bocaditos personalizados para eventos y celebraciones.</p>
+      </div>
+      <div class="faq-item nota">
+          <h3 onclick="toggleFAQ(this)">¿Cuál es el coste de envío?</h3>
+          <p>El envío es gratuito a partir de 45€. Para pedidos menores, se aplicará un coste adicional.</p>
+      </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+      <nav class="social">
+          <ul>
+              <li><a href="https://www.facebook.com/tusuariodefacebook" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="https://www.twitter.com/tusuariodetwitter" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="https://www.instagram.com/tusuariodeinstagram" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/tusuariodelinkedin" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+              <li><a href="https://www.github.com/tusuariodegithub" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+          </ul>
+      </nav>
+      <img src="imagenes/pagoseguroT.jpg" alt="Métodos de pago">
+      <p>&copy; 2025 DULCE Y SALADO. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Banner Cookies -->
+  <div id="ck">
+      <p>Usamos cookies para mejorar tu experiencia en nuestra web. Al continuar navegando, aceptas el uso de las mismas.</p>
+      <button id="accept-cookies-btn">Aceptar</button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="cookies.js"></script>
+  <script src="carrusel.js"></script>
+  <script>
+    const slides = document.querySelectorAll(".slide");
+const indicadores = document.getElementById("indicador");
+let currentIndex = 0;
+let interval = null;
+
+// Crear indicadores dinámicos
+slides.forEach((slide, index) => {
+    const dot = document.createElement("span");
+    dot.classList.add("punto");
+    if(index === 0) dot.classList.add("activo");
+    dot.addEventListener("click", () => showSlide(index));
+    indicadores.appendChild(dot);
+});
+
+const puntos = document.querySelectorAll(".punto");
+
+function showSlide(index) {
+    slides.forEach(s => s.classList.remove("active"));
+    puntos.forEach(p => p.classList.remove("activo"));
+    slides[index].classList.add("active");
+    puntos[index].classList.add("activo");
+    currentIndex = index;
+}
+
+// Funciones de navegación
+document.getElementById("prev").addEventListener("click", () => {
+    let nextIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(nextIndex);
+    resetInterval();
+});
+document.getElementById("next").addEventListener("click", () => {
+    let nextIndex = (currentIndex + 1) % slides.length;
+    showSlide(nextIndex);
+    resetInterval();
+});
+
+// Auto-reproducción
+function startCarousel() {
+    interval = setInterval(() => {
+        let nextIndex = (currentIndex + 1) % slides.length;
+        showSlide(nextIndex);
+    }, 3000);
+}
+function stopCarousel() {
+    clearInterval(interval);
+}
+document.getElementById("play").addEventListener("click", startCarousel);
+document.getElementById("pause").addEventListener("click", stopCarousel);
+
+function resetInterval() {
+    stopCarousel();
+    startCarousel();
+}
+
+// Iniciar automático al cargar
+startCarousel();
+
+
+
+      // FAQ expandible
+      function toggleFAQ(element) {
+          const content = element.nextElementSibling;
+          if(content.style.display === "block") {
+              content.style.display = "none";
+          } else {
+              content.style.display = "block";
+          }
+      }
+  </script>
+
+</body>
+</html>

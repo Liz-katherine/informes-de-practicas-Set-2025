@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagenes/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Pedidos</title>
+    <meta name="description" content="Realiza tu pedido en Dulce y Salado: completa el formulario y disfruta de nuestros postres, tartas y bocaditos en casa.">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Kings&family=Leckerli+One&family=Pacifico&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=cake,cookie" />
+</head>
+<body>
+
+    <div class="caja2"> 
+            <h1>DULCE Y SALADO by MC
+                <div> 
+                    <span class="material-symbols-outlined animated-icon">
+                    cake cookie  
+                    <header id="menu">          
+                        <ul>
+                            <a href="index.html">INICIO</a>
+                            <a href="09-tartas.html">TARTAS</a>
+                            <a href="postres.html">POSTRES</a>
+                            <a href="amasijos.html">AMASIJOS</a>
+                            <a href="#pedidos.html">PEDIDOS</a>
+                        </ul>
+                    </header>
+                </div>
+                
+    </div>      
+    <div class="kaushan-script-regular">
+    <form action="/enviar-datos" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br><br>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>      
+        <label for="telefono">Teléfono:</label>
+        <input type="number" id="telefono" name="telefono"><br><br>
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion"><br><br>
+        <label for="cd">CD:</label>
+        <input type="number" id="cd" name="cd"><br><br>
+        <label for="pedido">Pedido</label>
+        <select name="Pedido">           
+            <option value="value1">Tartas</option>
+            <option value="value2" selected>Postres</option>
+            <option value="value3">Amasijos</option>
+        </select>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Informe - de página web Dulce y Salado</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+  <header class="cabecera">
+    <h1>Informe de Análisis SEO - Dulce y Salado</h1>
+    <p class="sub">Fecha: <span id="fecha">02/01/2025</span></p>
+  </header>
+
+  <main class="contenido">
+    <section class="resumen">
+      <h2>Resumen</h2>
+      <p>El análisis SEO realizado a la página web <a href="https://dulceysalado.netlify.app/" target="_blank">Dulce y Salado</a> ha permitido identificar áreas de mejora y optimización. Se utilizaron herramientas como <a href="https://rankmath.com/tools/seo-analyzer/">Rank Math</a> para evaluar el rendimiento actual y proponer cambios efectivos.</p>
+      <p>Se creó una página web de prueba con las modificaciones sugeridas: <a href="https://hilarious-genie-b19d52.netlify.app/">https://super-daifuku-2d11c4.netlify.app/</a></p>
+    </section>
+
+    <section class="detalle">
+      <h2>Detalle</h2>
+      <p>Se analizaron diversos aspectos de la página, y se generaron los siguientes cambios:</p>
+
+      <h3>Datos clave</h3>
+      <ul>
+        <li>Meta descripción: <strong>Se adicionó  &lt;Meta name&gt;</strong></li>
+        <li><strong>H1 relevante:</strong> Se optimizó la etiqueta &lt;h1&gt; con palabras clave principales.</li>
+        <li><strong>H2 y H3 relevantes:</strong> Se optimizaron las etiquetas &lt;h2&gt; y &lt;h3&gt; con palabras clave de apoyo.</li>
+        <li>Preguntas frecuentes: <strong>Se añadió la sección para aportar contenido útil y mejorar el SEO</strong></li>
+        <li>Alt descriptivo: <strong>Se añadió texto Alt descriptivo para accesibilidad y SEO</strong></li>
+        </ul>
+
+      <h3>Tabla de resultados</h3>
+      <table class="tabla">
+        <thead>
+          <tr><th>Ítem</th><th>Valor</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Anterior</td><td>49/100</td></tr>
+          <tr><td>Actual</td><td>56/100</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+      <section class="imagenes">
+    <h2>Imágenes</h2>
+    <form>
+      <img src="imagenes/puntaje anterior.png" alt="Captura de pantalla del análisis SEO antes de los cambios" />
+      <img src="imagenes/puntaje actual.png" alt="Captura de pantalla del análisis SEO después de los cambios" />
+    </form>
+  </section>
+
+    <section class="conclusiones">
+      <h2>Conclusiones</h2>
+      <ol>
+        <li>Se añadió una meta descripción optimizada con palabras clave relevantes para mejorar la visibilidad en buscadores.</li>
+        <li>Se mejoro el h1, h2 y h3 para una mejor optimización</li>
+        <li>La página de inicio requiere más contenido (texto detallado) para SEO.</li>
+        <li>Una sección de preguntas frecuentes sobre la carta hace tu web más útil, relevante y visible para Google y para tus clientes potenciales.</li>
+        <li>Se añadió texto Alt descriptivo para accesibilidad, mejorar el SEO y reforzar la experiencia del usuario.</li>
+        
+      </ol>
+    </section>
+  </main>
+
+<!-- ...código existente... -->
+  <script>
+    document.querySelectorAll('.imagenes img').forEach(img => {
+      img.addEventListener('click', function() {
+        if (this.classList.contains('zoom')) {
+          this.classList.remove('zoom');
+        } else {
+          document.querySelectorAll('.imagenes img').forEach(i => i.classList.remove('zoom'));
+          this.classList.add('zoom');
+        }
+      });
+      // Opcional: cerrar al hacer clic fuera
+      window.addEventListener('click', function(e) {
+        if (!img.contains(e.target) && img.classList.contains('zoom')) {
+          img.classList.remove('zoom');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+  <footer class="pie">
+    <p>Autor: Liz Cebrecos Gayoso</p>
+  </footer>
+</body>
+</html>

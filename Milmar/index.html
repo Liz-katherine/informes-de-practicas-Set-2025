@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Informe - de página web Milmar</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+  <header class="cabecera">
+    <h1>Informe de Análisis SEO - Milmar</h1>
+    <p class="sub">Fecha: <span id="fecha">01/01/2025</span></p>
+  </header>
+
+  <main class="contenido">
+    <section class="resumen">
+      <h2>Resumen</h2>
+      <p> Se ejecutó un análisis de la página para revisar el SEO, con el analizador Rank Math para optimizar el contenido para los motores de búsqueda. <a
+         href="https://rankmath.com/tools/seo-analyzer/">https://rankmath.com/tools/seo-analyzer/</a>.</p>
+      <p>Se creó una página web de prueba con las modificaciones sugeridas: <a href="https://super-daifuku-2d11c4.netlify.app/">https://super-daifuku-2d11c4.netlify.app/</a></p>
+    </section>
+
+    <section class="detalle">
+      <h2>Detalle</h2>
+      <p>Se analizaron diversos aspectos de la página, y se generaron los siguientes cambios:</p>
+
+      <h3>Datos clave</h3>
+      <ul>
+        <li>Meta descripción: <strong>Se adicionó  &lt;Meta name&gt;</strong></li>
+        <li>Accesibilidad para lectores de pantalla, Alt descriptivo: <strong>"alt="Logo Milmar Cafe Bar"</strong></li>
+        <li>Contenido insuficiente en algunas seccione: <strong>Se agregó en la página de inicio: FAQS y testimonios</strong></li>
+        <li>FAQS: <strong>Se añadió una sección de preguntas frecuentes en la Carta para aportar contenido útil y mejorar el SEO.</strong></li>
+        <li>Imágenes: <strong>Loading="lazy" acelera la carga y mejora la experiencia, beneficiando el SEO.</strong></li>
+      </ul>
+
+      <h3>Tabla de resultados</h3>
+      <table class="tabla">
+        <thead>
+          <tr><th>Ítem</th><th>Valor</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Anterior</td><td>44/100</td></tr>
+          <tr><td>Actual</td><td>56/100</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+      <section class="imagenes">
+    <h2>Imágenes</h2>
+    <form>
+      <img src="imagenes/puntaje anterior.png" alt="Captura de pantalla del análisis SEO antes de los cambios" />
+      <img src="imagenes/puntaje actual.png" alt="Captura de pantalla del análisis SEO después de los cambios" />
+    </form>
+  </section>
+
+    <section class="conclusiones">
+      <h2>Conclusiones</h2>
+      <ol>
+        <li>Se modificó la meta descripción para incluir palabras clave relevantes.</li>
+        <li>Se añadió texto Alt descriptivo para accesibilidad, mejorar el SEO y reforzar la experiencia del usuario.</li>
+        <li>La página de inicio requiere más contenido (texto detallado, Q&A, testimonios) para SEO.</li>
+        <li>Una sección de preguntas frecuentes sobre la carta hace tu web más útil, relevante y visible para Google y para tus clientes potenciales.</li>
+        <li>Se optimizaron las imágenes con loading="lazy" para acelerar la carga y mejorar la experiencia del usuario, lo que indirectamente favorece el posicionamiento en buscadores.</li>
+      </ol>
+    </section>
+  </main>
+
+<!-- ...código existente... -->
+  <script>
+    document.querySelectorAll('.imagenes img').forEach(img => {
+      img.addEventListener('click', function() {
+        if (this.classList.contains('zoom')) {
+          this.classList.remove('zoom');
+        } else {
+          document.querySelectorAll('.imagenes img').forEach(i => i.classList.remove('zoom'));
+          this.classList.add('zoom');
+        }
+      });
+      // Opcional: cerrar al hacer clic fuera
+      window.addEventListener('click', function(e) {
+        if (!img.contains(e.target) && img.classList.contains('zoom')) {
+          img.classList.remove('zoom');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+  <footer class="pie">
+    <p>Autor: Liz Cebrecos Gayoso</p>
+  </footer>
+</body>
+</html>
