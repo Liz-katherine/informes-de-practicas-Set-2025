@@ -1,0 +1,48 @@
+.sectionfoto {
+  display: flex;
+  flex-wrap: wrap; /* para que se pueda apilar en pantallas pequeñas */
+  margin-bottom: 2rem;
+}
+
+/* Columnas de la sección */
+.sectionfoto .colfoto {
+  flex: 1 1 50%;
+  position: relative;
+  overflow: hidden; /* para recortar la imagen si es necesario */
+}
+
+/* Imagen específica que ocupa toda la columna */
+#fotoPrincipal {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* recorta la imagen para llenar la columna */
+  display: block;
+}
+
+/* Columna de texto */
+.sectionfoto .textfoto {
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Alternar orden: imagen a la derecha */
+.sectionfoto.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Responsive: columnas apiladas */
+@media (max-width: 768px) {
+  .sectionfoto {
+    flex-direction: column;
+  }
+  .sectionfoto .colfoto, 
+  .sectionfoto .textfoto {
+    flex: 1 1 100%;
+  }
+  .sectionfoto.reverse {
+    flex-direction: column;
+  }
+}

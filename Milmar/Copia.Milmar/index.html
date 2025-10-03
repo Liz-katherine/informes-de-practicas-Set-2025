@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milmar Cafe Bar - Zarautz</title>
+    <!-- Meta SEO -->
+    <meta name="description" content="Milmar Cafe Bar en Zarautz: café, desayunos, pintxos y buena comida junto al mar. Descubre nuestra carta, galería y reserva tu mesa en un ambiente único.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fotos.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header transparent" id="header"> 
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="imagenes/Milmar withoutbg.png" style="width: 80px; height: 80px;" alt="Logo Milmar Cafe Bar">
+            </a>
+            <nav class="nav" role="navigation" aria-label="Menú principal">
+                <a href="index.html" data-translate="nav.home">Inicio</a>
+                <a href="carta.html" data-translate="nav.menu">Carta</a>
+                <a href="contacto.html" data-translate="nav.contact">Contacto</a>
+                <a href="galeria.html" data-translate="nav.gallery">Galería</a>
+                <a href="nosotros.html" data-translate="nav.about">Nosotros</a>
+                <div class="language-selector" role="group" aria-label="Selector de idioma">
+                    <button class="lang-btn active" onclick="changeLanguage('es')" aria-pressed="true">ES</button>
+                    <button class="lang-btn" onclick="changeLanguage('en')" aria-pressed="false">EN</button>
+                    <button class="lang-btn" onclick="changeLanguage('fr')" aria-pressed="false">FR</button>
+                    <button class="lang-btn" onclick="changeLanguage('eu')" aria-pressed="false">EU</button>
+                </div>
+            </nav>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-carousel" aria-label="Galería principal" role="region">
+                <div class="hero-slide active" style="background-image: url('./imagenes/coffee-1869772_1280.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="hero-slide" style="background-image: url('./imagenes/food-7006591_1280.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="hero-slide" style="background-image: url('./imagenes/paisaje-de-zarautz-4bba44c9-3de5-40f7-899b-2b9e18bbf7ac.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="hero-slide" style="background-image: url('./imagenes/clock-4715849_1280.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="hero-slide" style="background-image: url('./imagenes/palacio-narros-Zarautz-qué-ver-y-hacer-1024x768.jpg'); background-size: cover; background-position: center;"></div>
+                <button class="carousel-prev" aria-label="Anterior" tabindex="0">&#10094;</button>
+                <button class="carousel-next" aria-label="Siguiente" tabindex="0">&#10095;</button>
+            </div>
+            <div class="hero-content">
+                <h1>Bienvenidos a Milmar</h1>
+                <p>Café, comida y buenas vibraciones junto al mar en Zarautz</p>
+                <div class="cta-buttons">
+                    <a href="carta.html" class="btn btn-primary">Ver Carta</a>
+                    <a href="contacto.html" class="btn btn-secondary">Reservar Mesa</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intro Section -->
+        <section class="sectionfoto main-content">
+            <div class="card fade-in">
+                <h2>Experiencia Única en Zarautz</h2>
+                <p style="text-align: center; font-size: 1.2rem; max-width: 800px; margin: 0 auto; line-height: 1.8; color: var(--primary-text-light);">
+                    En <strong>Milmar Cafe Bar</strong>, combinamos la pasión por el café de especialidad con el sabor del mar Cantábrico. Nuestra misión es ofrecerte un lugar donde disfrutar de desayunos saludables, pintxos tradicionales, hamburguesas gourmet y opciones vegetarianas y veganas, siempre con productos locales y frescos. El ambiente surfero y relajado de Zarautz se refleja en cada rincón de nuestro local.
+                </p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-home">
+            <h2>Sobre Milmar Café Bar</h2>
+            <p>Fundado con el objetivo de ser un punto de encuentro en Zarautz, <strong>Milmar</strong> es mucho más que un café. Aquí encontrarás un espacio acogedor con vistas al mar, perfecto para compartir desayunos, comidas o tardes de café con amigos. Apostamos por <strong>productos de proximidad y sostenibles</strong>, cuidando cada detalle para que tu experiencia sea inolvidable.</p>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-home">
+            <h2>Preguntas Frecuentes</h2>
+            <details>
+                <summary>¿Ofrecéis opciones veganas y sin gluten?</summary>
+                <p>Sí, contamos con alternativas veganas, vegetarianas y sin gluten tanto en desayunos como en comidas y cenas.</p>
+            </details>
+            <details>
+                <summary>¿Se puede reservar mesa en la terraza?</summary>
+                <p>Por supuesto, puedes hacerlo en la sección <a href="contacto.html">Contacto</a> o llamando directamente a nuestro local.</p>
+            </details>
+            <details>
+                <summary>¿Cuál es el horario de Milmar Café Bar?</summary>
+                <p>Abrimos todos los días desde las 9:00 hasta la medianoche, con cocina abierta en horario de comidas y cenas.</p>
+            </details>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonios">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <blockquote>
+                “El mejor café de Zarautz, acompañado de un ambiente inmejorable frente al mar.”  
+                <cite>— Ane, cliente habitual</cite>
+            </blockquote>
+            <blockquote>
+                “Una carta variada, productos locales y un trato cercano. ¡Muy recomendable!”  
+                <cite>— Iker, visitante</cite>
+            </blockquote>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="newsletter-signup">
+                <h3>Suscríbete para ofertas y noticias</h3>
+                <form class="newsletter-form" onsubmit="return showNewsletterSuccess(event)">
+                    <input type="text" placeholder="Tu nombre">
+                    <input type="email" placeholder="Tu email">
+                    <button type="submit">Suscribir</button>
+                    <span id="newsletter-success" style="display:none; color:green;">¡Gracias por suscribirte!</span>
+                </form>
+            </div>
+            <p>&copy; 2025 Milmar Cafe Bar. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+    function showNewsletterSuccess(e) {
+        e.preventDefault();
+        document.getElementById('newsletter-success').style.display = 'inline';
+        return false;
+    }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- Contenido insuficiente en algunas secciones
+La página de inicio tiene un párrafo, pero para posicionarse bien en Google se recomienda un contenido más robusto: más palabras, más detalle, incluso bloques de preguntas/respuestas, testimonios, etc. Además, las secciones “Carta”, “Galería” etc., se beneficiarían de descripciones con texto real (no sólo imágenes) para que los motores de búsqueda tengan contenido que indexar. -->

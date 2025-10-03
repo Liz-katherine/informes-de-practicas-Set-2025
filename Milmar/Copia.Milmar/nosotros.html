@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milmar Cafe Bar - Zarautz</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header transparent" id="header">
+        <div class="header-content">
+            <a href="index.html" class="logo"><img src="imagenes/Milmar withoutbg.png" style="width: 80px; height: 80px;"></a>
+            <nav class="nav">
+                <a href="index.html" data-translate="nav.home">Inicio</a>
+                <a href="carta.html" data-translate="nav.menu">Carta</a>
+                <a href="contacto.html" data-translate="nav.contact">Contacto</a>
+                <a href="blog.html" data-translate="nav.blog">Blog</a>
+                <a href="galeria.html" data-translate="nav.gallery">Galería</a>
+                <a href="nosotros.html" data-translate="nav.about">Nosotros</a>
+                <div class="language-selector">
+                    <button class="lang-btn active" onclick="changeLanguage('es')">ES</button>
+                    <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+                    <button class="lang-btn" onclick="changeLanguage('fr')">FR</button>
+                    <button class="lang-btn" onclick="changeLanguage('eu')">EU</button>
+                </div>
+            </nav>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Page -->
+    <div id="about" class="page active">
+        <section class="section main-content" style="margin-top: 120px;">
+            <h2 data-translate="about.title">Nuestra Historia</h2>
+            
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <div style="margin-bottom: 3rem;">
+                    <div style="width: 200px; height: 200px; margin: 0 auto 2rem; background: linear-gradient(135deg, var(--accent), var(--warm)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem;" data-translate="about.passion.title">Pasión por el Mar y el Café</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;" data-translate="about.passion.text">
+                        Milmar nació de la pasión por crear un espacio donde el aroma del café se mezcla con la brisa marina de Zarautz. Somos más que un café, somos un punto de encuentro para locales, surfistas y viajeros que buscan momentos auténticos junto al mar.
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 3rem;">
+                    <div style="width: 200px; height: 200px; margin: 0 auto 2rem; background: linear-gradient(45deg, var(--primary-text), var(--accent)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem;" data-translate="about.ingredients.title">Ingredientes Locales</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;" data-translate="about.ingredients.text">
+                        Creemos en la importancia de los productos locales y sostenibles. Trabajamos con proveedores de la zona para ofrecerte lo mejor del País Vasco, desde pescado fresco de nuestros puertos hasta verduras de las huertas cercanas.
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 3rem;">
+                    <div style="width: 200px; height: 200px; margin: 0 auto 2rem; background: linear-gradient(225deg, var(--warm), var(--primary-text)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem;" data-translate="about.community.title">Comunidad y Cultura</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;" data-translate="about.community.text">
+                        Milmar es un reflejo de la cultura vasca: acogedora, auténtica y siempre dispuesta a compartir. Organizamos eventos culturales, noches de música en vivo y celebramos las tradiciones locales, creando un espacio donde todos se sienten como en casa.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 style="margin-bottom: 1rem;" data-translate="about.zarautz.title">El Encanto de Zarautz</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8;" data-translate="about.zarautz.text">
+                        Ubicados en una de las playas más hermosas del Cantábrico, ofrecemos la oportunidad perfecta para disfrutar de un café mientras contemplas las olas o saborear una comida después de un día de surf. Zarautz no es solo nuestro hogar, es nuestra inspiración diaria.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="newsletter-signup">
+                <h3 data-translate="newsletter.title">Suscríbete para ofertas y noticias</h3>
+                <form class="newsletter-form">
+                    <input type="text" placeholder="Tu nombre" data-translate="newsletter.name">
+                    <input type="email" placeholder="Tu email" data-translate="newsletter.email">
+                    <button type="submit" data-translate="newsletter.subscribe">Suscribir</button>
+                </form>
+            </div>
+            <p>&copy; 2025 Milmar Cafe Bar. <span data-translate="footer.rights">Todos los derechos reservados.</span></p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+            

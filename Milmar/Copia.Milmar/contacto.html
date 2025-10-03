@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milmar Cafe Bar - Zarautz</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header transparent" id="header">
+        <div class="header-content">
+            <a href="index.html" class="logo"><img src="imagenes/Milmar withoutbg.png" style="width: 80px; height: 80px;"></a>
+            <nav class="nav">
+                <a href="index.html" data-translate="nav.home">Inicio</a>
+                <a href="carta.html" data-translate="nav.menu">Carta</a>
+                <a href="contacto.html" data-translate="nav.contact">Contacto</a>
+                <a href="galeria.html" data-translate="nav.gallery">Galería</a>
+                <a href="nosotros.html" data-translate="nav.about">Nosotros</a>
+                <div class="language-selector">
+                    <button class="lang-btn active" onclick="changeLanguage('es')">ES</button>
+                    <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+                    <button class="lang-btn" onclick="changeLanguage('fr')">FR</button>
+                    <button class="lang-btn" onclick="changeLanguage('eu')">EU</button>
+                </div>
+            </nav>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page active">
+        <!-- Hero Section Compacta -->
+        <section class="contact-hero">
+            <div class="contact-hero-content">
+                <h1 data-translate="contact.title">¡Contacta con Nosotros!</h1>
+                <p data-translate="contact.subtitle">Estamos aquí para hacer tu experiencia perfecta</p>
+            </div>
+        </section>
+
+        <!-- Información de Contacto y Formulario -->
+        <section class="contact-main">
+            <div class="contact-container">
+                <!-- Información de Contacto -->
+                <div class="contact-info-card">
+                    <div class="contact-info-section">
+                        <h3><i class="fas fa-map-marker-alt"></i> <span data-translate="contact.info.title">Encuéntranos</span></h3>
+                        <p>Calle de la Playa, 15<br>20800 Zarautz, Gipuzkoa</p>
+                    </div>
+                    
+                    <div class="contact-info-section">
+                        <h3><i class="fas fa-clock"></i> <span data-translate="contact.hours.title">Horarios</span></h3>
+                        <div class="hours-grid">
+                            <div class="hours-item">
+                                <span class="day" data-translate="contact.hours.weekdays">Lun - Vie</span>
+                                <span class="time">8:00 - 22:00</span>
+                            </div>
+                            <div class="hours-item">
+                                <span class="day" data-translate="contact.hours.weekends">Sáb - Dom</span>
+                                <span class="time">9:00 - 23:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-section">
+                        <h3><i class="fas fa-phone"></i> <span>Contacto Directo</span></h3>
+                        <div class="contact-methods">
+                            <a href="tel:+34943123456" class="contact-method">
+                                <i class="fas fa-phone"></i>
+                                <span>+34 943 123 456</span>
+                            </a>
+                            <a href="mailto:info@milmarcafebar.com" class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <span>info@milmarcafebar.com</span>
+                            </a>
+                            <a href="https://wa.me/34943123456" class="contact-method" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-section">
+                        <h3><i class="fas fa-share-alt"></i> Síguenos</h3>
+                        <div class="social-links">
+                            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario de Reserva -->
+                <div class="reservation-card">
+                    <h3 data-translate="contact.reservation.title">Reservar Mesa</h3>
+                    <p class="reservation-subtitle">Asegura tu mesa y vive la experiencia Milmar</p>
+                    
+                    <form action="send_mail.php" method="POST" class="reservation-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label data-translate="contact.form.name">Nombre</label>
+                                <input type="text" name="nombre" placeholder="Tu nombre completo" required>
+                            </div>
+                            <div class="form-group">
+                                <label data-translate="contact.form.email">Email</label>
+                                <input type="email" name="email" placeholder="tu@email.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label data-translate="contact.form.persons">Personas</label>
+                                <select name="personas" required>
+                                    <option value="">¿Cuántos sois?</option>
+                                    <option value="1">1 persona</option>
+                                    <option value="2">2 personas</option>
+                                    <option value="3">3 personas</option>
+                                    <option value="4">4 personas</option>
+                                    <option value="5">5 personas</option>
+                                    <option value="6+">6+ personas</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label data-translate="contact.form.date">Fecha</label>
+                                <input type="date" name="fecha" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label data-translate="contact.form.time">Hora preferida</label>
+                            <div class="time-slots">
+                                <input type="radio" id="breakfast" name="hora" value="09:30">
+                                <label for="breakfast" class="time-slot">Desayuno<br><small>09:30-11:30</small></label>
+                                
+                                <input type="radio" id="brunch" name="hora" value="12:00">
+                                <label for="brunch" class="time-slot">Brunch<br><small>12:00-15:00</small></label>
+                                
+                                <input type="radio" id="dinner" name="hora" value="19:30">
+                                <label for="dinner" class="time-slot">Cena<br><small>19:30-21:30</small></label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label data-translate="contact.form.comments">Mensaje (opcional)</label>
+                            <textarea name="comentarios" placeholder="Alergias, celebraciones especiales o cualquier petición..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <i class="fas fa-calendar-check"></i>
+                            <span data-translate="contact.form.submit">Confirmar Reserva</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mapa -->
+        <section class="map-section">
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d169.38906644308458!2d-2.176011816614332!3d43.28679374628142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51c9c529c5c429%3A0x9dcb4082bc85eded!2sMilMar%20Caf%C3%A9%20Bar!5e0!3m2!1ses!2ses!4v1694970101234"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <div class="map-overlay">
+                    <h4>Milmar Cafe Bar</h4>
+                    <p>Zarautz, Gipuzkoa</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="newsletter-signup">
+                <h3 data-translate="newsletter.title">Suscríbete para ofertas y noticias</h3>
+                <form class="newsletter-form">
+                    <input type="text" placeholder="Tu nombre" data-translate="newsletter.name">
+                    <input type="email" placeholder="Tu email" data-translate="newsletter.email">
+                    <button type="submit" data-translate="newsletter.subscribe">Suscribir</button>
+                </form>
+            </div>
+            <p>&copy; 2025 Milmar Cafe Bar. <span data-translate="footer.rights">Todos los derechos reservados.</span></p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+            

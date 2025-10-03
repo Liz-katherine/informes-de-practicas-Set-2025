@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta - Milmar Cafe Bar Zarautz</title>
+    <meta name="description" content="Descubre la carta de Milmar Cafe Bar en Zarautz. Desde tostadas y arepas hasta ensaladas frescas y bowls nutritivos. ¡Sabores únicos junto al mar!">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header transparent" id="header">
+        <div class="header-content">
+            <a href="index.html" class="logo"><img src="imagenes/Milmar withoutbg.png" alt="Logo Milmar Café Bar" style="width: 80px; height: 80px;"></a>
+            <nav class="nav">
+                <a href="index.html" data-translate="nav.home">Inicio</a>
+                <a href="carta.html" data-translate="nav.menu" class="active">Carta</a>
+                <a href="contacto.html" data-translate="nav.contact">Contacto</a>
+                <a href="galeria.html" data-translate="nav.gallery">Galería</a>
+                <a href="nosotros.html" data-translate="nav.about">Nosotros</a>
+                <div class="language-selector">
+                    <button class="lang-btn active" onclick="changeLanguage('es')">ES</button>
+                    <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+                    <button class="lang-btn" onclick="changeLanguage('fr')">FR</button>
+                    <button class="lang-btn" onclick="changeLanguage('eu')">EU</button>
+                </div>
+            </nav>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Hero Section -->
+    <section class="contact-hero">
+        <div class="contact-hero-content">
+            <h1 data-translate="gallery.title">Nuestra Carta</h1>
+            <p data-translate="menu.subtitle">Descubre sabores únicos en cada plato</p>
+        </div>
+    </section>
+
+    <!-- Menu Page -->
+    <div id="menu" class="page active">
+        <section class="menu-main">
+            <div class="menu-container">
+                <div class="menu-tabs">
+                    <button class="menu-tab active" onclick="showMenuSection('tostadas')" data-translate="menu.tostadas">Tostadas</button>
+                    <button class="menu-tab" onclick="showMenuSection('arepas')" data-translate="menu.arepas">Arepas</button>
+                    <button class="menu-tab" onclick="showMenuSection('sandwiches')" data-translate="menu.sandwiches">Sandwiches</button>
+                    <button class="menu-tab" onclick="showMenuSection('sweetbowls')" data-translate="menu.sweetbowls">Sweet bowls</button>
+                    <button class="menu-tab" onclick="showMenuSection('portions')" data-translate="menu.portions">Porciones</button>
+                    <button class="menu-tab" onclick="showMenuSection('salads')" data-translate="menu.salads">Ensaladas Frescas</button>
+                    <button class="menu-tab" onclick="showMenuSection('journey')" data-translate="menu.journey">Viaje de Sabores</button>
+                    <button class="menu-tab" onclick="showMenuSection('bowls')" data-translate="menu.bowls">Bowls</button>
+                </div>
+
+                <div id="tostadas" class="menu-content active">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="menu.items.tostada.name.avo">Tostada de Aguacate y Huevos</h3>
+                            <p data-translate="menu.items.tostada.avocado">Queso crema, aguacate, tortilla francesa.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Gluten">G</span>
+                                <span class="allergen-icon" title="Huevos">H</span>
+                                <span class="allergen-icon" title="Lácteos">L</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€7.50</span>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="menu.items.tostada.name.med">Tostada Mediterránea</h3>
+                            <p data-translate="menu.items.tostada.med">Queso crema, tomates cherry y aceite de oliva.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Gluten">G</span>
+                                <span class="allergen-icon" title="Lácteos">L</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€6.50</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="menu.items.tostada.name.jam">Tostada de Jamón</h3>
+                            <p data-translate="menu.items.tostada.jam">Jamón ibérico, tomate triturado y aceite de oliva.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Gluten">G</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€4.95</span>
+                    </div>
+                
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="menu.items.tostada.name.avosal">Tostada Avosalmón</h3>
+                            <p data-translate="menu.items.tostada.avosal">Aguacate triturado, salmón ahumado.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Gluten">G</span>
+                                <span class="allergen-icon" title="Pescado">P</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€7.50</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="menu.items.tostada.name.dul">Tostada Dulce</h3>
+                            <p data-translate="menu.items.tostada.dul">Mantequilla y mermelada (Mermelada natural de temporada).</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Gluten">G</span>
+                                <span class="allergen-icon" title="Lácteos">L</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€3.50</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="menu.items.tostada.name.peanut">Tostada de Crema de Cacahuetes</h3>
+                            <p data-translate="menu.items.tostada.peanut">Con fruta de temporada y coco rallado.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Gluten">G</span>
+                                <span class="allergen-icon" title="Frutos secos">F</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€6.50</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="menu.items.tostada.name.clasic">Tostada Clásica</h3>
+                            <p data-translate="menu.items.tostada.clasic">Aceite de oliva y tomate triturado.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Gluten">G</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€3.00</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="menu.items.tostada.name.verde">Tostada Verde y Salado</h3>
+                            <p data-translate="menu.items.tostada.verde">Jamón, tomate, aguacate y aceite de oliva.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Gluten">G</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€7.50</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="menu.items.tostada.name.nordic">Tostada Nórdica</h3>
+                            <p data-translate="menu.items.tostada.nordic">Queso crema, tomate cherry, salmón ahumado y semillas de sésamo.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Gluten">G</span>
+                                <span class="allergen-icon" title="Lácteos">L</span>
+                                <span class="allergen-icon" title="Pescado">P</span>
+                                <span class="allergen-icon" title="Sésamo">S</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€8.00</span>
+                    </div>
+                </div>
+
+                <div id="arepas" class="menu-content">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="menu.items.arepas.name.queen">Reina Pepiada (2 unid)</h3>
+                            <p data-translate="menu.items.arepas.queen">Pollo, aguacate y mayonesa.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Huevos">H</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€8.50</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="menu.items.arepas.name.perico">Perico (2 unid)</h3>
+                            <p data-translate="menu.items.arepas.perico">Huevos revueltos cremosos con tomate y cebolla.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Huevos">H</span>
+                                <span class="allergen-icon" title="Lácteos">L</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€8.50</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="menu.items.arepas.name.clasic">Clásica (2 unid)</h3>
+                            <p data-translate="menu.items.arepas.clasic">Jamón york, queso cheddar y mayonesa.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Huevos">H</span>
+                                <span class="allergen-icon" title="Lácteos">L</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€8.50</span>
+                    </div>
+                </div>
+
+                <div id="sandwiches" class="menu-content">
+                    <div class="menu-category-header">
+                        <h4 data-translate="menu.sandwiches.pan">Elaborados con pan payés de semillas</h4>
+                        <svg width="50px" height="50px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="Gluten" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+                            <path d="M4.90709946,11.4653026 C7.01338466,13.0450699 7.44021176,16.0332059 5.86044447,18.1394911 C5.64363317,18.428563 5.39483672,18.6918116 5.11898453,18.9243074 L4.90709946,19.0928361 C2.80081426,17.5130688 2.37398717,14.5249329 3.95375445,12.4186477 C4.17056575,12.1295757 4.41936221,11.8663271 4.6952144,11.6338313 L4.90709946,11.4653026 Z M8.72073729,7.65153593 C10.8270225,9.23130322 11.2538496,12.2194392 9.6740823,14.3257244 C9.457271,14.6147963 9.20847454,14.8780449 8.93262236,15.1105407 L8.72073729,15.2790694 C6.61445209,13.6993021 6.18762499,10.7111661 7.76739228,8.60488094 C7.98420358,8.31580898 8.23300004,8.05256039 8.50885222,7.8200646 L8.72073729,7.65153593 Z M12.5343751,3.83776921 C14.6406603,5.4175365 15.0674874,8.40567244 13.4877201,10.5119576 C13.2709088,10.8010296 13.0221124,11.0642782 12.7462602,11.296774 L12.5343751,11.4653026 C10.4280899,9.88553536 10.0012628,6.89739942 11.5810301,4.79111422 C11.7978414,4.50204226 12.0466379,4.23879367 12.32249,4.00629788 L12.5343751,3.83776921 Z M20.1616508,11.4653026 C18.5820436,13.5715167 15.5940953,13.9984159 13.4878812,12.4188088 C13.1987527,12.2019697 12.9354572,11.953132 12.7029271,11.6772283 L12.5343751,11.4653026 C14.1139822,9.35908863 17.1019306,8.9321894 19.2081446,10.5117965 C19.4972732,10.7286356 19.7605687,10.9774733 19.9930988,11.253377 L20.1616508,11.4653026 Z M16.3480129,15.2790694 C14.7684058,17.3852834 11.7804574,17.8121826 9.67424341,16.2325755 C9.38511489,16.0157364 9.12181933,15.7668988 8.88928925,15.490995 L8.72073729,15.2790694 C10.3003444,13.1728554 13.2882928,12.7459561 15.3945068,14.3255632 C15.6836353,14.5424023 15.9469309,14.79124 16.179461,15.0671437 L16.3480129,15.2790694 Z M12.5343751,19.0928361 C10.954768,21.1990501 7.9668196,21.6259493 5.86060558,20.0463422 C5.57147707,19.8295031 5.30818151,19.5806655 5.07565143,19.3047617 L4.90709946,19.0928361 C6.48670659,16.9866221 9.47465498,16.5597228 11.580869,18.13933 C11.8699975,18.356169 12.1332931,18.6050067 12.3658232,18.8809104 L12.5343751,19.0928361 Z M20.9514816,3.04791286 C21.3238283,5.6544274 19.5128192,8.06908238 16.9065088,8.44139985 C16.548771,8.49250352 16.1866752,8.50272288 15.8271945,8.47205796 L15.5581541,8.44118932 C15.1858366,5.83487893 16.9968457,3.42022395 19.6031561,3.04790648 C20.0503283,2.9840269 20.5043101,2.98402905 20.9514816,3.04791286 Z" id="Combined-Shape" stroke="#000000"></path>
+                                    </g>
+                        </svg>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="menu.items.sandwiches.name.tuna">Tuna</h3>
+                            <p data-translate="menu.items.sandwiches.tuna">Paté de atún, pesto de pistacho, tomate cherry y aguacate.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Pescado">P</span>
+                                <span class="allergen-icon" title="Frutos secos">F</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€8.90</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="menu.items.sandwiches.name.vegetal">Vegetal</h3>
+                            <p data-translate="menu.items.sandwiches.vegetal">Aguacate, queso cheddar, lechuga crujiente, tomate triturado.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Gluten">G</span>
+                                <span class="allergen-icon" title="Lácteos">L</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€6.10</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="menu.items.sandwiches.name.golden">Brunch Dorado</h3>
+                            <p data-translate="menu.items.sandwiches.golden">Huevos revueltos cremosos, bacon crujiente y tomate triturado.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Gluten">G</span>
+                                <span class="allergen-icon" title="Huevos">H</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€8.00</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="menu.items.sandwiches.name.iberico">Ibérico</h3>
+                            <p data-translate="menu.items.sandwiches.iberico">Jamón ibérico, mozzarella, tomate cherry, rúcula y pesto casero.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Gluten">G</span>
+                                <span class="allergen-icon" title="Lácteos">L</span>
+                                <span class="allergen-icon" title="Frutos secos">F</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€10.00</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="menu.items.sandwiches.name.club">Club House</h3>
+                            <p data-translate="menu.items.sandwiches.club">Pollo desmenuzado, lechuga fresca, tomate, huevo frito, jamón cocido, queso y bacon.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Gluten">G</span>
+                                <span class="allergen-icon" title="Huevos">H</span>
+                                <span class="allergen-icon" title="Lácteos">L</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€11.00</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="menu.items.sandwiches.name.mix">Mixto</h3>
+                            <p data-translate="menu.items.sandwiches.mix">Jamón cocido, queso cheddar fundido y mayonesa.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Gluten">G</span>
+                                <span class="allergen-icon" title="Huevos">H</span>
+                                <span class="allergen-icon" title="Lácteos">L</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€7.00</span>
+                    </div>
+                </div>
+
+                <div id="sweetbowls" class="menu-content">
+                    <div class="bowl-creator">
+                        <div class="creator-header">
+                            <h3 data-translate="sweet.bowls.crea">Crea tu Bowl Milmar</h3>
+                            <p data-translate="sweet.bowls.crea2">¡A tu gusto, a tu estilo!</p>
+                        </div>
+                        
+                        <div class="menu-item special">
+                            <div class="menu-item-info">
+                                <h3 data-translate="sweet.bowls.choose">Elige tu base:</h3>
+                                <div class="options-grid">
+                                    <span data-translate="sweet.option.1" class="option">Açai</span>
+                                    <span data-translate="sweet.option.2" class="option">Yogur natural</span>
+                                    <span data-translate="sweet.option.3" class="option">Maracuyá</span>
+                                    <span data-translate="sweet.option.4" class="option">Piña y coco</span>
+                                    <span data-translate="sweet.option.5" class="option">Blue Blast (Arándanos, plátano, manzana, espirulina azul)</span>
+                                    <span data-translate="sweet.option.6" class="option">Matcha Power (espinaca, plátano, manzana, matcha)</span>
+                                </div>
+                                <div class="allergens">
+                                    <span class="allergen-icon" title="Lácteos">L</span>
+                                </div>
+                            </div>
+                            <span class="menu-price">€6.50</span>
+                        </div>
+
+                        <div class="menu-item special">
+                            <div class="menu-item-info">
+                                <h3 data-translate="sweet.toppings">Toppings (Elige hasta 5)</h3>
+                                <div class="options-grid">
+                                    <span data-translate="sweet.toppings.1" class="option">Granola crujiente</span>
+                                    <span data-translate="sweet.toppings.2" class="option">Almendras laminadas</span>
+                                    <span data-translate="sweet.toppings.3" class="option">Fruta fresca de temporada</span>
+                                    <span data-translate="sweet.toppings.4" class="option">Sirope de Chocolate</span>
+                                    <span data-translate="sweet.toppings.5" class="option">Dulce de leche</span>
+                                    <span data-translate="sweet.toppings.6" class="option">Leche condensada</span>
+                                    <span data-translate="sweet.toppings.7" class="option">Mermelada Natural</span>
+                                    <span data-translate="sweet.toppings.8" class="option">Mantequilla de cacahuetes</span>
+                                </div>
+                                <div class="allergens">
+                                    <span class="allergen-icon" title="Lácteos">L</span>
+                                    <span class="allergen-icon" title="Frutos secos">F</span>
+                                    <span class="allergen-icon" title="Gluten">G</span>
+                                </div>
+                            </div>
+                            <span data-translate="sweet.toppings.ex" class="menu-price extra">Topping extra: +€0.50</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="portions" class="menu-content">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="portions.1">Tequeños Milmar (5 unid)</h3>
+                            <p data-translate="portions.1.des">Palitos crujientes de harina de trigo rellenos de queso latino.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Gluten">G</span>
+                                <span class="allergen-icon" title="Lácteos">L</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€8.50</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="portions.2">Patatas Cheddar y Bacon</h3>
+                            <p data-translate="portions.2.des">Crujientes por fuera, suaves por dentro. Coronadas con bacon y queso cheddar fundido.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Lácteos">L</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€7.90</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="portions.3">Nachos Veganos</h3>
+                            <p data-translate="portions.3.des">Totopos crujientes con guacamole, pico de gallo, maíz dulce y un toque de lima. (Opción con carne picada y queso fundido)</p>
+                            <div class="allergens">
+                                <span class="allergen-icon vegan" title="Vegano">V</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€10.00</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="portions.4">Fingers de Pollo Crujientes (7 unid)</h3>
+                            <p data-translate="portions.4.des">Pollo marinado en especias suaves, rebozado con harina de garbanzo y frito al momento servido con patatas.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Gluten">G</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€8.50</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="portions.5">Txipirones crujientes</h3>
+                            <p data-translate="portions.5.des">Txipirones rebozados, fritos al punto y servidos con alioli suave y limón.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Gluten">G</span>
+                                <span class="allergen-icon" title="Pescado">P</span>
+                                <span class="allergen-icon" title="Huevos">H</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€9.00</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="portions.6">Croquetas de Jamón (5 unidades)</h3>
+                            <p data-translate="portions.6.des">Croquetas de jamón serrano, crujientes por fuera y cremosas por dentro.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Gluten">G</span>
+                                <span class="allergen-icon" title="Lácteos">L</span>
+                                <span class="allergen-icon" title="Huevos">H</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€8.90</span>
+                    </div>
+                </div>
+
+                <div id="salads" class="menu-content">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="salads.1">Ensalada Milmar</h3>
+                            <p data-translate="salads.1.des">Lechuga crujiente, tomates cherry jugosos, cebolla morada caramelizada, maíz dulce, nueces tostadas, pasas y gambas salteadas. Aliñada con nuestra vinagreta especial de la casa.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Frutos secos">F</span>
+                                <span class="allergen-icon" title="Crustáceos">C</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€11.00</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="salads.2">Ensalada César</h3>
+                            <p data-translate="salads.2.des">Lechuga fresca, pollo salteado, crotones crujientes y nuestro aderezo César cremoso y casero.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Gluten">G</span>
+                                <span class="allergen-icon" title="Lácteos">L</span>
+                                <span class="allergen-icon" title="Huevos">H</span>
+                                <span class="allergen-icon" title="Pescado">P</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€8.90</span>
+                    </div>
+                </div>
+
+                <div id="journey" class="menu-content">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="journey.1">Secreto Ibérico con Puré de Manzana</h3>
+                            <p data-translate="journey.1.des">Delicado corte ibérico acompañado de puré suave de manzana y guarnición de patatas.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Lácteos">L</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€12.50</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="journey.2">Entrecot con Chimichurri (250gr)</h3>
+                            <p data-translate="journey.2.des">Jugoso entrecot al grill, servido con chimichurri tradicional de Argentina. Acompañado de patatas caseras.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Soja">S</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€16.00</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="journey.3">Pechuga en salsa de Champiñones</h3>
+                            <p data-translate="journey.3.des">Jugosa pechuga a la plancha, con una suave salsa cremosa de champiñones acompañada de patatas caseras.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Lácteos">L</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€14.50</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Hamburguesa a la Grecia</h3>
+                            <p>Carne 100% vacuno, lechuga, tomate, cebolla crispy, bacon, jamón cocido, queso cheddar, huevo frito y salsa de la casa con ración de patatas.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Gluten">G</span>
+                                <span class="allergen-icon" title="Huevos">H</span>
+                                <span class="allergen-icon" title="Lácteos">L</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€11.50</span>
+                    </div>
+                </div>
+
+                <div id="bowls" class="menu-content">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="bowls.1">Kaia Bowl</h3>
+                            <p data-translate="bowls.1.des"><strong>Base a elegir:</strong> arroz o lechuga<br>Salmón fresco, mango, aguacate, edamame, cebolla crispy, sésamo y salsa ajo-cilantro.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Pescado">P</span>
+                                <span class="allergen-icon" title="Soja">S</span>
+                                <span class="allergen-icon" title="Sésamo">SE</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€12.50</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="bowls.2">Aloha Milmar</h3>
+                            <p data-translate="bowls.2.des"><strong>Base a elegir:</strong> arroz o lechuga<br>Pollo asado, maíz dulce, aguacate, zanahoria rallada, edamame, sésamo y salsa ajo-cilantro.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Soja">S</span>
+                                <span class="allergen-icon" title="Sésamo">SE</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€12.50</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="bowls.3">Burger Bowl</h3>
+                            <p data-translate="bowls.3.des">Jugosa carne de vacuno, queso cheddar, bacon crujiente, lechuga, tomate, cebolla caramelizada y patatas caseras.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon" title="Lácteos">L</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€11.50</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3 data-translate="bowls.4">Bowl Falafel</h3>
+                            <p data-translate="bowls.4.des">Falafel de lenteja casero, lechuga, pico de gallo, guacamole y hummus de garbanzo.</p>
+                            <div class="allergens">
+                                <span class="allergen-icon vegan" title="Vegano">V</span>
+                                <span class="allergen-icon" title="Sésamo">SE</span>
+                            </div>
+                        </div>
+                        <span class="menu-price">€12.50</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    
+        <!-- Preguntas frecuentes sobre la carta -->
+        <section class="faq-carta">
+            <h2>Preguntas sobre la carta</h2>
+            <details>
+                <summary>¿Cambia la carta según la temporada?</summary>
+                <p>Sí, trabajamos con productos de temporada para garantizar frescura y sabor.</p>
+            </details>
+            <details>
+                <summary>¿Puedo pedir para llevar?</summary>
+                <p>Ofrecemos servicio de take away en todos nuestros platos y bebidas.</p>
+            </details>
+        </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="newsletter-signup">
+                <h3 data-translate="newsletter.title">Suscríbete para ofertas y noticias</h3>
+                <form class="newsletter-form">
+                    <input type="text" placeholder="Tu nombre" data-translate="newsletter.name">
+                    <input type="email" placeholder="Tu email" data-translate="newsletter.email">
+                    <button type="submit" data-translate="newsletter.subscribe">Suscribir</button>
+                </form>
+            </div>
+            <p>&copy; 2025 Milmar Cafe Bar. <span data-translate="footer.rights">Todos los derechos reservados.</span></p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

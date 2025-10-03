@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milmar Cafe Bar - Zarautz</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header transparent" id="header">
+        <div class="header-content">
+            <a href="#" class="logo" onclick="showPage('home')">Milmar Cafe Bar</a>
+            <nav class="nav">
+                <a href="/index.html" data-translate="nav.home">Inicio</a>
+                <a href="/carta.html" data-translate="nav.menu">Carta</a>
+                <a href="/contacto.html" data-translate="nav.contact">Contacto</a>
+                <a href="/blog.html" data-translate="nav.blog">Blog</a>
+                <a href="/galeria.html" data-translate="nav.gallery">Galería</a>
+                <a href="/nosotros.html" data-translate="nav.about">Nosotros</a>
+                <div class="language-selector">
+                    <button class="lang-btn active" onclick="changeLanguage('es')">ES</button>
+                    <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+                    <button class="lang-btn" onclick="changeLanguage('fr')">FR</button>
+                    <button class="lang-btn" onclick="changeLanguage('eus')">EUS</button>
+                </div>
+            </nav>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-carousel">
+                <div class="hero-slide active" style="background-image: url('./imagenes/coffee-1869772_1280.jpg'); background-size: cover; background-position: center;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 4rem;">
+                        <!-- <i class="fas fa-coffee"></i> -->
+                    </div>
+                </div>
+                <div class="hero-slide" style="background-image: url('./imagenes/food-7006591_1280.jpg'); background-size: cover; background-position: center;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 4rem;">
+                        <!-- <i class="fas fa-utensils"></i> -->
+                    </div>
+                </div>
+                <div class="hero-slide" style="background-image: url('./imagenes/paisaje-de-zarautz-4bba44c9-3de5-40f7-899b-2b9e18bbf7ac.jpg'); background-size: cover; background-position: center;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 4rem;">
+                       <!--  <i class="fas fa-waves"></i> -->
+                    </div>
+                </div>
+                <div class="hero-slide" style="background-image: url('./imagenes/clock-4715849_1280.jpg'); background-size: cover; background-position: center;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 4rem;">
+                        <!-- <i class="fas fa-seedling"></i> -->
+                    </div>
+                </div>
+                <div class="hero-slide" style="background-image: url('./imagenes/palacio-narros-Zarautz-qué-ver-y-hacer-1024x768.jpg'); background-size: cover; background-position: center;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 4rem;">
+                        <!-- <i class="fas fa-sun"></i> -->
+                    </div>
+                </div>
+            </div>
+            <div class="hero-content">
+                <h1 data-translate="hero.title">Bienvenidos a Milmar</h1>
+                <p data-translate="hero.subtitle">Café, comida y buenas vibraciones junto al mar en Zarautz</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary" onclick="showPage('menu')" data-translate="hero.menu">Ver Carta</a>
+                    <a href="#" class="btn btn-secondary" onclick="showPage('contact')" data-translate="hero.contact">Reservar Mesa</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="section main-content">
+            <div class="fade-in">
+                <h2 data-translate="intro.title">Experiencia Única en Zarautz</h2>
+                <p style="text-align: center; font-size: 1.2rem; max-width: 800px; margin: 0 auto; line-height: 1.8;">
+                    <span data-translate="intro.text">En Milmar Cafe Bar, combinamos la pasión por el buen café con la frescura del mar. Ubicados en el corazón de Zarautz, ofrecemos una experiencia gastronómica única con productos locales y ambiente relajado que refleja el espíritu surfero de nuestra costa.</span>
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Menu Page -->
+    <div id="menu" class="page">
+        <section class="section main-content" style="margin-top: 120px;">
+            <h2 data-translate="menu.title">Nuestra Carta</h2>
+            
+            <div class="menu-tabs">
+                <button class="menu-tab active" onclick="showMenuSection('tostadas')" data-translate="menu.tostadas">Tostadas</button>
+                <button class="menu-tab" onclick="showMenuSection('arepas')" data-translate="menu.arepas">Arepas</button>
+                <button class="menu-tab" onclick="showMenuSection('sandwiches')" data-translate="menu.sandwiches">Sandwiches</button>
+                <button class="menu-tab" onclick="showMenuSection('sweetbowls')" data-translate="menu.sweetbowls">Sweet bowls</button>
+                <button class="menu-tab" onclick="showMenuSection('portions')" data-translate="menu.portions">Porciones</button>
+                <button class="menu-tab" onclick="showMenuSection('salads')" data-translate="menu.salads">Ensaladas Frescas</button>
+                <button class="menu-tab" onclick="showMenuSection('journey')" data-translate="menu.journey">Viaje de Sabores</button>
+                <button class="menu-tab" onclick="showMenuSection('bowls')" data-translate="menu.bowls">Bowls</button>
+                <button class="menu-tab" onclick="showMenuSection('hamburger')" data-translate="menu.hamburger">Hamburguesas</button>
+            </div>
+
+            <div id="tostadas" class="menu-content active">
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3 data-translate="menu.items.tostada.name.avo">Tostada de Aguacate y Huevos </h3>
+                        <p data-translate="menu.items.tostada.avocado">Queso crema, aguacate, tortilla francesa.</p>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Gluten">G</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€7.50</span>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3 data-translate="menu.items.tostada.name.med">Tostada Mediterránea</h3>
+                        <p data-translate="menu.items.tostada.med">Queso crema, tomates cherry y aceite de oliva.</p>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Gluten">G</span>
+                            <span class="allergen-icon" title="Lácteos">L</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€6.50</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3 data-translate="menu.items.tostada.name.jam">Tostada de Jamón</h3>
+                        <p data-translate="menu.items.tostada.jam">Jamón ibérico, tomate triturado y aceite de oliva.</p>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Lácteos">L</span>
+                            <span class="allergen-icon" title="Frutos secos">F</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€4.95</span>
+                </div>
+            
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3 data-translate="menu.items.tostada.name.avosal">Tostada Avosalmón</h3>
+                        <p data-translate="menu.items.tostada.avosal">Aguacate triturado, salmón ahumado.</p>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Gluten">G</span>
+                            <span class="allergen-icon" title="Huevos">H</span>
+                            <span class="allergen-icon" title="Lácteos">L</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€7.50</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3 data-translate="menu.items.tostada.name.dul">Tostada Dulce</h3>
+                        <p data-translate="menu.items.tostada.dul">Mantequilla y mermelada (Mermelada natural de temporada).</p>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Gluten">G</span>
+                            <span class="allergen-icon" title="Huevos">H</span>
+                            <span class="allergen-icon" title="Lácteos">L</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€3.50</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3 data-translate="menu.items.tostada.name.peanut">Tostada de Crema de Cacahuetes</h3>
+                        <p data-translate="menu.items.tostada.peanut">Con fruta de temporada y coco rallado.</p>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Gluten">G</span>
+                            <span class="allergen-icon" title="Huevos">H</span>
+                            <span class="allergen-icon" title="Lácteos">L</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€6.50</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3 data-translate="menu.items.tostada.name.clasic">Tostada Clásica</h3>
+                        <p data-translate="menu.items.tostada.clasic">Aceite de oliva y tomate triturado.</p>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Gluten">G</span>
+                            <span class="allergen-icon" title="Huevos">H</span>
+                            <span class="allergen-icon" title="Lácteos">L</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€3.00</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3 data-translate="menu.items.tostada.name.verde">Tostada Verde y Salado</h3>
+                        <p data-translate="menu.items.tostada.verde">Jamón, tomate, aguacate y aceite de oliva.</p>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Gluten">G</span>
+                            <span class="allergen-icon" title="Huevos">H</span>
+                            <span class="allergen-icon" title="Lácteos">L</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€7.50</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3 data-translate="menu.items.tostada.name.nordic">Tostada Nórdica</h3>
+                        <p data-translate="menu.items.tostada.nordic">Queso crema, tomate cherry, salmón ahumado y semillas de sésamo.</p>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Gluten">G</span>
+                            <span class="allergen-icon" title="Huevos">H</span>
+                            <span class="allergen-icon" title="Lácteos">L</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€8.00</span>
+                </div>
+            </div>
+
+            <div id="arepas" class="menu-content">
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3 data-translate="menu.items.arepas.name.queen">Reina Pepiada (2 unid)</h3>
+                        <p data-translate="menu.items.arepas.queen">Pollo, aguacate y mayonesa.</p>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Gluten">G</span>
+                            <span class="allergen-icon" title="Huevos">H</span>
+                            <span class="allergen-icon" title="Lácteos">L</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€8.50</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3 data-translate="menu.items.arepas.name.perico">Perico (2 unid)</h3>
+                        <p data-translate="menu.items.arepas.perico">Huevos revueltos cremosos con tomate y cebolla.</p>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Gluten">G</span>
+                            <span class="allergen-icon" title="Huevos">H</span>
+                            <span class="allergen-icon" title="Lácteos">L</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€8.50</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3 data-translate="menu.items.arepas.name.clasic">Clásica (2 unid)</h3>
+                        <p data-translate="menu.items.arepas.clasic">Jamón york, queso cheedar y mayonesa.</p>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Gluten">G</span>
+                            <span class="allergen-icon" title="Huevos">H</span>
+                            <span class="allergen-icon" title="Lácteos">L</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€8.50</span>
+                </div>
+            </div>
+
+            <div id="sandwiches" class="menu-content">
+                <h4>(Elaborados con pan payés de semillas)</h4>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3 data-translate="menu.items.sandwiches.name.tuna">Tuna</h3>
+                        <p data-translate="menu.items.sandwiches.tuna">Pate de atún, pesto de pistacho, tomate cherry y aguacate.</p>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Gluten">G</span>
+                            <span class="allergen-icon" title="Huevos">H</span>
+                            <span class="allergen-icon" title="Lácteos">L</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€8.90</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3 data-translate="menu.items.sandwiches.name.vegetal">Vegetal</h3>
+                        <p data-translate="menu.items.sandwiches.vegetal">Aguacate, queso cheedar, lechuga crujiente, tomate triturado.</p>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Gluten">G</span>
+                            <span class="allergen-icon" title="Huevos">H</span>
+                            <span class="allergen-icon" title="Lácteos">L</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€6.10</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3 data-translate="menu.items.sandwiches.name.golden">Brunch Dorado</h3>
+                        <p data-translate="menu.items.sandwiches.golden">Huevos revueltos cremosos, bacon crujiente y tomate triturado.</p>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Gluten">G</span>
+                            <span class="allergen-icon" title="Huevos">H</span>
+                            <span class="allergen-icon" title="Lácteos">L</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€8.00</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3 data-translate="menu.items.sandwiches.name.iberico">Ibérico</h3>
+                        <p data-translate="menu.items.sandwiches.iberico">Jamón ibérico, mozzarella, tomate cherry, rúcula y pestp casero.</p>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Gluten">G</span>
+                            <span class="allergen-icon" title="Huevos">H</span>
+                            <span class="allergen-icon" title="Lácteos">L</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€10.00</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3 data-translate="menu.items.sandwiches.name.club">Club House</h3>
+                        <p data-translate="menu.items.sandwiches.club">Pollo desmenuzado, lechuga fresca, tomate, huevo frito, jamón cocido, queso y bacón.</p>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Gluten">G</span>
+                            <span class="allergen-icon" title="Huevos">H</span>
+                            <span class="allergen-icon" title="Lácteos">L</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€11.00</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3 data-translate="menu.items.sandwiches.name.mix">Mixto</h3>
+                        <p data-translate="menu.items.sandwiches.mix">Jamón cocido, queso cheddar fundido y mayonesa.</p>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Gluten">G</span>
+                            <span class="allergen-icon" title="Huevos">H</span>
+                            <span class="allergen-icon" title="Lácteos">L</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€11.00</span>
+                </div>
+
+            </div>
+
+            <div id="sweetbowls" class="menu-content">
+                <div>
+                    <h3>Crea tu Bowl Milmar</h3>
+                    <h3>¡A tu gusto, a tu estilo!</h3>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3>Elige tu base:</h3>
+                        <ul> 
+                            <li>Açai</li>
+                            <li>Yogur natural</li>
+                            <li>Fruta de la pasión</li>
+                            <li>Piña y coco</li>
+                            <li>Blue Blast (Arandanos, plátano, manzana, espirulina azul)</li>
+                            <li>Matcha Power (espinaca, plátano, manzana, matcha)</li>
+                        </ul>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Lácteos">L</span>
+                            <span class="allergen-icon" title="Huevos">H</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€6.50</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3>Toppings (Elige hasta 5)</h3>
+                        <ul> 
+                            <li>Granola crujiente</li>
+                            <li>Almendras laminadas</li>
+                            <li>Fruta fresca de temporada</li>
+                            <li>Sirope de Chocolate</li>
+                            <li>Dulce de leche</li>
+                            <li>Leche condensada</li>
+                            <li>Mermelada Natural</li>
+                            <li>Mantequilla de cacahuetes</li>
+                        </ul>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Lácteos">L</span>
+                            <span class="allergen-icon" title="Huevos">H</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">(Topping extra: +€0.50)</span>
+                </div>
+
+            </div>
+
+            <div id="portions" class="menu-content">
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3>Tequeños Milmar (5 unid)</h3>
+                        <p>Palitos crujientes de harina de trigo rellenos de queso latino.</p>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Lácteos">L</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€8.50</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3>Patatas Cheddar y Bacon</h3>
+                        <p>Crujientes por fuera, suaves por dentro. Coronadas con bacon y queso cheddar fundido.</p>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Pescado">P</span>
+                            <span class="allergen-icon" title="Soja">S</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€7.90</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3>Nachos Veganos</h3>
+                        <p>Totopos crujientes con guacamole, pico de gallo, maíz dulce y un toque de lima. (Opcion con carne picada y queso fundido)</p>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Pescado">P</span>
+                            <span class="allergen-icon" title="Soja">S</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€10.00</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3>Fingers de Pollo Crujientes (7 unid)</h3>
+                        <p>Pollo marinado en especias suaves, rebozado con harina de garbanzo y frito al momento servido con patatas.</p>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Pescado">P</span>
+                            <span class="allergen-icon" title="Soja">S</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€8.50</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3>Txipirones crujientes</h3>
+                        <p>Txipirones rebozados, fritos al punto y servidos con alioli suave y limón.</p>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Pescado">P</span>
+                            <span class="allergen-icon" title="Soja">S</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€9.00</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3>Croquetas de Jamón (5 unidades)</h3>
+                        <p>Croquetas de jamón serrano, crujientes por fuera y cremosos por dentro.</p>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Pescado">P</span>
+                            <span class="allergen-icon" title="Soja">S</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€8.90</span>
+                </div>
+
+            </div>
+
+            <div id="salads" class="menu-content">
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3>Ensalada Milmar</h3>
+                        <p>Lechuga crujiente, tomates cherry jugoso, cebolla morada caramelizada, maíz dulce, nueces tostadas, pasas y gambas salteadas. Aliñada con nuestra vinagreta especial de la casa.</p>
+                        <div class="allergens"></div>
+                    </div>
+                    <span class="menu-price">€11.00</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3>Ensalada Cesar</h3>
+                        <p>Lechuga fresca, pollo salteado, crotones crujientes y nuestro aderezo César cremoso y casero.</p>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Gluten">G</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€8.90</span>
+                </div>
+            </div>
+
+            <div id="journey" class="menu-content">
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3>Secreto Ibérico con Puré de Manzana</h3>
+                        <p>Delicado corte ibérico acompañado de puré suave de manzana y guarnición de patatas.</p>
+                        <div class="allergens"></div>
+                    </div>
+                    <span class="menu-price">€12.50</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3>Entrecot con Chimichurri (250gr)</h3>
+                        <p>Jugoso entrecot al grill, servido con chimichurri tradicional de argentina. Acompañado de patatas caseras.</p>
+                        <div class="allergens"></div>
+                    </div>
+                    <span class="menu-price">€16.00</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3>Pechuga en salsa de Champiñones</h3>
+                        <p>Jugosa pechuga a la plancha, con una suave salsa cremosa de champiñones acompañada de patatas caseras.</p>
+                        <div class="allergens"></div>
+                    </div>
+                    <span class="menu-price">€14.50</span>
+                </div>
+            </div>
+
+            <div id="bowls" class="menu-content">
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3>Kaia Bowl</h3>
+                        <p>(Base a elegir: arroz o lechuga) Salmón fresco, mango, aguacate, edamame, cebolla crispy, sésamo y salsa ajo-cilantro.</p>
+                        <div class="allergens"></div>
+                    </div>
+                    <span class="menu-price">€12.50</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3>Aloha Milmar</h3>
+                        <p>(Base a elegir: arroz o lechuga) Pollo asado, maíz dulce, aguacate, zanahoria rallada, edamame, sésamo y salsa ajo-cilantro.</p>
+                        <div class="allergens">
+                            <span class="allergen-icon" title="Lácteos">L</span>
+                        </div>
+                    </div>
+                    <span class="menu-price">€12.50</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3>Burger Bowl</h3>
+                        <p>Jugosa carne de vacuno, queso cheddar, bacon crujiente, lechuga, tomate, cebolla caramelizada y patatas caseras.</p>
+                        <div class="allergens"></div>
+                    </div>
+                    <span class="menu-price">€11.50</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3>Bowl Falafel</h3>
+                        <p>Falafel de lenteja casero, lechuga, pico de gallo, guacamole y hummus de garbanzo</p>
+                        <div class="allergens"></div>
+                    </div>
+                    <span class="menu-price">€12.50</span>
+                </div>
+            </div>
+
+            <div id="hamburger" class="menu-content">
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h3>Hamburguesa a la Grecia</h3>
+                        <p>Carne 100% vacuno, lechuga, tomate, cebolla crispy, bacon, jamón cocido, queso cheddar, huevo frito y salsa de la casa con ración de patatas.</p>
+                        <div class="allergens"></div>
+                    </div>
+                    <span class="menu-price">€11.50</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <section class="section main-content" style="margin-top: 120px;">
+            <h2 data-translate="contact.title">¡Contacta con Nosotros!</h2>
+            
+            <div class="contact-section">
+                <div class="contact-info">
+                    <h3 data-translate="contact.info.title">Información de Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong data-translate="contact.info.address">Dirección:</strong><br>
+                    Calle de la Playa, 15<br>
+                    20800 Zarautz, Gipuzkoa</p>
+                    
+                    <p><i class="fas fa-phone"></i> <strong data-translate="contact.info.phone">Teléfono:</strong><br>
+                    +34 943 123 456</p>
+                    
+                    <p><i class="fas fa-envelope"></i> <strong data-translate="contact.info.email">Email:</strong><br>
+                    info@milmarcafebar.com</p>
+
+                    <h3 data-translate="contact.hours.title">Horarios</h3>
+                    <p><strong data-translate="contact.hours.weekdays">Lunes - Viernes:</strong> 8:00 - 22:00</p>
+                    <p><strong data-translate="contact.hours.weekends">Sábados - Domingos:</strong> 9:00 - 23:00</p>
+
+                    <div class="social-links">
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+            <div class="reservation-form">
+                <h3 data-translate="contact.reservation.title">Reservar Mesa</h3>
+                <form action="send_mail.php" method="POST">
+                    <div class="form-group">
+                        <label data-translate="contact.form.name">Nombre:</label>
+                        <input type="text" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-translate="contact.form.email">Email:</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-translate="contact.form.persons">Número de Personas:</label>
+                        <select name="personas" required>
+                            <option value="">Seleccionar...</option>
+                            <option value="1">1 persona</option>
+                            <option value="2">2 personas</option>
+                            <option value="3">3 personas</option>
+                            <option value="4">4 personas</option>
+                            <option value="5">5 personas</option>
+                            <option value="6+">6+ personas</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label data-translate="contact.form.date">Fecha:</label>
+                        <input type="date" name="fecha" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-translate="contact.form.time">Hora:</label>
+                        <select name="hora" required>
+                            <option value="">Seleccionar hora...</option>
+                            <option value="09:30">09:30</option>
+                            <option value="10:00">10:00</option>
+                            <option value="10:30">10:30</option>
+                            <option value="11:00">11:00</option>
+                            <option value="11:30">11:30</option>
+                            <option value="12:00">12:00</option>
+                            <option value="12:30">12:30</option>
+                            <option value="13:00">13:00</option>
+                            <option value="13:30">13:30</option>
+                            <option value="14:00">14:00</option>
+                            <option value="14:30">14:30</option>
+                            <option value="15:00">15:00</option>
+                            <option value="19:00">19:00</option>
+                            <option value="19:30">19:30</option>
+                            <option value="20:00">20:00</option>
+                            <option value="20:30">20:30</option>
+                            <option value="21:00">21:00</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label data-translate="contact.form.comments">Comentarios (Alergias/Peticiones Especiales):</label>
+                        <textarea name="comentarios" placeholder="Cuéntanos si tienes alguna alergia alimentaria o petición especial..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-translate="contact.form.submit">Enviar Reserva</button>
+                </form>
+            </div>
+
+            </div>
+
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d169.38906644308458!2d-2.176011816614332!3d43.28679374628142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51c9c529c5c429%3A0x9dcb4082bc85eded!2sMilMar%20Caf%C3%A9%20Bar!5e0!3m2!1ses!2ses!4v1694970101234"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                   
+                </iframe>
+            </div>
+        </section>
+    </div>
+
+    <!-- Blog Page -->
+    <div id="blog" class="page">
+        <section class="section main-content" style="margin-top: 120px;">
+            <h2 data-translate="blog.title">Noticias y Eventos</h2>
+
+            <article class="blog-post">
+                <h3 data-translate="blog.post1.title">Nueva Temporada: Productos Frescos de Primavera</h3>
+                <div class="blog-post-meta">
+                    <i class="fas fa-calendar-alt"></i> 8 de septiembre, 2025
+                </div>
+                <div class="blog-post-content">
+                    <p data-translate="blog.post1.content">¡La primavera ha llegado a Milmar! Estamos emocionados de presentar nuestra nueva selección de productos frescos de temporada. Desde espárragos locales hasta fresas de Aranjuez, cada plato refleja lo mejor de la estación. Ven a probar nuestros nuevos bowls primaverales y ensaladas frescas que capturan la esencia de esta época del año.</p>
+                </div>
+                <div class="comments-section">
+                    <h4 data-translate="blog.comments.title">Comentarios</h4>
+                    <form>
+                        <div class="form-group">
+                            <label data-translate="blog.comments.email">Tu email:</label>
+                            <input type="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-translate="blog.comments.comment">Tu comentario:</label>
+                            <textarea placeholder="Comparte tu opinión..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-translate="blog.comments.submit">Enviar Comentario</button>
+                    </form>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <h3 data-translate="blog.post2.title">Noches de Jazz en Milmar</h3>
+                <div class="blog-post-meta">
+                    <i class="fas fa-calendar-alt"></i> 5 de septiembre, 2025
+                </div>
+                <div class="blog-post-content">
+                    <p data-translate="blog.post2.content">Todos los viernes de este mes, Milmar se transforma en un íntimo club de jazz. A partir de las 20:00h, músicos locales llenarán nuestro espacio con melodías suaves que complementan perfectamente nuestros cocktails artesanales. Una experiencia única que combina buena música, excelentes bebidas y las vistas al mar de Zarautz.</p>
+                </div>
+                <div class="comments-section">
+                    <h4 data-translate="blog.comments.title">Comentarios</h4>
+                    <form>
+                        <div class="form-group">
+                            <label data-translate="blog.comments.email">Tu email:</label>
+                            <input type="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-translate="blog.comments.comment">Tu comentario:</label>
+                            <textarea placeholder="Comparte tu opinión..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-translate="blog.comments.submit">Enviar Comentario</button>
+                    </form>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <h3 data-translate="blog.post3.title">Nuevos Cafés de Especialidad</h3>
+                <div class="blog-post-meta">
+                    <i class="fas fa-calendar-alt"></i> 1 de septiembre, 2025
+                </div>
+                <div class="blog-post-content">
+                    <p data-translate="blog.post3.content">Hemos ampliado nuestra carta de cafés con nuevas variedades de tueste artesanal. Trabajamos directamente con productores de Centroamérica para traerte los granos más frescos y sabrosos. Nuestro barista especializado estará encantado de recomendarte el método de extracción perfecto para cada origen. ¡Descubre tu nuevo café favorito en Milmar!</p>
+                </div>
+                <div class="comments-section">
+                    <h4 data-translate="blog.comments.title">Comentarios</h4>
+                    <form>
+                        <div class="form-group">
+                            <label data-translate="blog.comments.email">Tu email:</label>
+                            <input type="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-translate="blog.comments.comment">Tu comentario:</label>
+                            <textarea placeholder="Comparte tu opinión..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-translate="blog.comments.submit">Enviar Comentario</button>
+                    </form>
+                </div>
+            </article>
+        </section>
+    </div>
+
+    <!-- Gallery Page -->
+    <div id="gallery" class="page">
+        <section class="section main-content" style="margin-top: 120px;">
+            <h2 data-translate="gallery.title">Galería</h2>
+            <p style="text-align: center; margin-bottom: 2rem;" data-translate="gallery.subtitle">Descubre el ambiente y los sabores de Milmar</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="imagenes/pexels-evgeniya-kuzmina-88531454-9040188.jpg" alt="Plato 1">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="imagenes/pexels-igor-starkov-233202-914390.jpg" alt="Plato 1">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="imagenes/pexels-matthiasgroeneveld-20142833.jpg" alt="Plato 1">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="imagenes/pexels-natalia-yamboglo-455894192-20067991.jpg" alt="Plato 1">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="imagenes/pexels-taryn-elliott-9716777.jpg" alt="Plato 1">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="/imagenes/pexels-bernahanim_-1173268160-27696731.jpg" alt="Plato 1">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="imagenes/pexels-yuraforrat-19928108.jpg" alt="Plato 1">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="imagenes/pexels-valeriya-kobzar-42371713-11790418.jpg" alt="Plato 1">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="imagenes/pexels-alena-32816962.jpg" alt="Plato 1">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+        <section class="section main-content" style="margin-top: 120px;">
+            <h2 data-translate="about.title">Nuestra Historia</h2>
+            
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <div style="margin-bottom: 3rem;">
+                    <div style="width: 200px; height: 200px; margin: 0 auto 2rem; background: linear-gradient(135deg, var(--accent), var(--warm)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem;" data-translate="about.passion.title">Pasión por el Mar y el Café</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;" data-translate="about.passion.text">
+                        Milmar nació de la pasión por crear un espacio donde el aroma del café se mezcla con la brisa marina de Zarautz. Somos más que un café, somos un punto de encuentro para locales, surfistas y viajeros que buscan momentos auténticos junto al mar.
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 3rem;">
+                    <div style="width: 200px; height: 200px; margin: 0 auto 2rem; background: linear-gradient(45deg, var(--primary-text), var(--accent)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem;" data-translate="about.ingredients.title">Ingredientes Locales</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;" data-translate="about.ingredients.text">
+                        Creemos en la importancia de los productos locales y sostenibles. Trabajamos con proveedores de la zona para ofrecerte lo mejor del País Vasco, desde pescado fresco de nuestros puertos hasta verduras de las huertas cercanas.
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 3rem;">
+                    <div style="width: 200px; height: 200px; margin: 0 auto 2rem; background: linear-gradient(225deg, var(--warm), var(--primary-text)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem;" data-translate="about.community.title">Comunidad y Cultura</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;" data-translate="about.community.text">
+                        Milmar es un reflejo de la cultura vasca: acogedora, auténtica y siempre dispuesta a compartir. Organizamos eventos culturales, noches de música en vivo y celebramos las tradiciones locales, creando un espacio donde todos se sienten como en casa.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 style="margin-bottom: 1rem;" data-translate="about.zarautz.title">El Encanto de Zarautz</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8;" data-translate="about.zarautz.text">
+                        Ubicados en una de las playas más hermosas del Cantábrico, ofrecemos la oportunidad perfecta para disfrutar de un café mientras contemplas las olas o saborear una comida después de un día de surf. Zarautz no es solo nuestro hogar, es nuestra inspiración diaria.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="newsletter-signup">
+                <h3 data-translate="newsletter.title">Suscríbete para ofertas y noticias</h3>
+                <form class="newsletter-form">
+                    <input type="text" placeholder="Tu nombre" data-translate="newsletter.name">
+                    <input type="email" placeholder="Tu email" data-translate="newsletter.email">
+                    <button type="submit" data-translate="newsletter.subscribe">Suscribir</button>
+                </form>
+            </div>
+            <p>&copy; 2025 Milmar Cafe Bar. <span data-translate="footer.rights">Todos los derechos reservados.</span></p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+            

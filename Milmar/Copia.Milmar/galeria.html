@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milmar Cafe Bar Zarautz</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header transparent" id="header">
+        <div class="header-content">
+            <a href="index.html" class="logo"><img src="imagenes/Milmar withoutbg.png" style="width: 80px; height: 80px;"></a>
+            <nav class="nav">
+                <a href="index.html" data-translate="nav.home">Inicio</a>
+                <a href="carta.html" data-translate="nav.menu">Carta</a>
+                <a href="contacto.html" data-translate="nav.contact">Contacto</a>
+                <a href="galeria.html" data-translate="nav.gallery">Galería</a>
+                <a href="nosotros.html" data-translate="nav.about">Nosotros</a>
+                <div class="language-selector">
+                    <button class="lang-btn active" onclick="changeLanguage('es')">ES</button>
+                    <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+                    <button class="lang-btn" onclick="changeLanguage('fr')">FR</button>
+                    <button class="lang-btn" onclick="changeLanguage('eu')">EU</button>
+                </div>
+            </nav>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Gallery Page -->
+    <div id="gallery" class="page active">
+        
+        <!-- Hero Section Compacta -->
+        <section class="contact-hero">
+        <div class="contact-hero-content">
+            <h1 data-translate="gallery.title">Galería</h1>
+            <p data-translate="gallery.subtitle">Descubre el ambiente y los sabores de Milmar</p>
+        </div>
+    </section>
+       <!--  Mejora SEO: Optimización de imágenes (alt, tamaño) alt="Plato 1" loading="lazy"-->
+        <section class="section main-content">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                        <img src="imagenes/pexels-evgeniya-kuzmina-88531454-9040188.jpg" alt="Café especialidad Milmar" width="400" height="300" loading="lazy">
+                    </picture>
+                    <div class="gallery-placeholder">
+                        <img src="imagenes/pexels-evgeniya-kuzmina-88531454-9040188.jpg" alt="Café especialidad Milmar" loading="lazy">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="imagenes/pexels-igor-starkov-233202-914390.jpg" alt="Desayuno saludable" loading="lazy">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="imagenes/pexels-matthiasgroeneveld-20142833.jpg" alt="Tarta casera del día" loading="lazy">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="imagenes/pexels-natalia-yamboglo-455894192-20067991.jpg" alt="Ambiente en terraza" loading="lazy">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="imagenes/pexels-taryn-elliott-9716777.jpg" alt="Brunch junto al mar" loading="lazy">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="imagenes/pexels-bernahanim_-1173268160-27696731.jpg" alt="Copa y relax" loading="lazy">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="imagenes/pexels-yuraforrat-19928108.jpg" alt="Postre artesanal" loading="lazy">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="imagenes/pexels-valeriya-kobzar-42371713-11790418.jpg" alt="Decoración Milmar" loading="lazy">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="imagenes/pexels-alena-32816962.jpg" alt="Ambiente interior" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="newsletter-signup">
+                <h3 data-translate="newsletter.title">Suscríbete para ofertas y noticias</h3>
+                <form class="newsletter-form">
+                    <input type="text" placeholder="Tu nombre" data-translate="newsletter.name">
+                    <input type="email" placeholder="Tu email" data-translate="newsletter.email">
+                    <button type="submit" data-translate="newsletter.subscribe">Suscribir</button>
+                </form>
+            </div>
+            <p>&copy; 2025 Milmar Cafe Bar. <span data-translate="footer.rights">Todos los derechos reservados.</span></p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+            
